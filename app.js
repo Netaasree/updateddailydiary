@@ -2,7 +2,7 @@
 document.getElementById('save-diary-btn')?.addEventListener('click', function() {
     const content = document.getElementById('diary-content')?.value;
 
-    fetch('http://127.0.0.1:5000/diary', {
+    fetch('http://127.0.0.1:5003/diary', {  // Updated port
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ document.getElementById('save-diary-btn')?.addEventListener('click', function() 
 
 // Load diaries functionality
 function loadDiaries() {
-    fetch('http://127.0.0.1:5000/diaries')
+    fetch('http://127.0.0.1:5003/diaries')  // Updated port
     .then(response => response.json())
     .then(data => {
         const diaryList = document.getElementById('diary-list');
